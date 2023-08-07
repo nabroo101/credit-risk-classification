@@ -1,31 +1,27 @@
-# Module 12 Report Template
+# Module 12 Report 
+# credit-risk-classification Report 
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+The purpose of this analysis was to evaluate potential loan applicants to identify whether they are high-risk or low-risk borrowers. The primary objective was to build a machine learning model that can predict the risk associated with a particular loan based on various financial features.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+The data used in this analysis consisted of several factors such as loan size, interest rate, borrower income, debt to income ratio, number of credit accounts, derogatory marks, and total debt. Our main target variable was the 'loan_status', which we needed to predict. It is a binary variable with '1' indicating a 'High-Risk' loan and '0' signifying a 'Healthy' loan.
+
+The stages of the machine learning process for this analysis included splitting the data into training and testing sets, fitting the data to the Logistic Regression model, and making predictions using the testing data. We also generated a confusion matrix to visualize the performance of the model, calculated accuracy scores, and used the classification report to get detailed precision and recall scores.
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
+For the Logistic Regression model, the results were as follows:
 
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
-
-
-
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+* Logistic Regression Model:
+  * Accuracy Score: The accuracy of the model on both the training and testing data was 99.2%, indicating that the model was able to correctly predict the loan status 99.2% of the time.
+  * Precision Score: For the 'Healthy' loan status, the precision was 1.00, meaning when the model predicted a loan to be 'Healthy', it was correct 100% of the time. The precision for the 'High-risk' loan status was 0.85, indicating an 85% correctness when the model predicted a loan to be 'High-risk'.
+  * Recall Score: The recall for 'Healthy' loans was 0.99, showing that the model correctly identified 99% of the actual 'Healthy' loans. For 'High-risk' loans, the recall was 0.91, which means the model correctly identified 91% of the actual 'High-risk' loans.
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+The logistic regression model performed exceptionally well at predicting both 'Healthy' and 'High-risk' loan statuses. The model displayed high accuracy, precision, and recall scores. 
 
-If you do not recommend any of the models, please justify your reasoning.
+Given the results, the logistic regression model seems to perform best due to its high accuracy, precision, and recall scores. We can say it performs the best because it has a high ability to predict both 'Healthy' and 'High-risk' loans correctly. The performance does depend on the problem we're trying to solve - in this case, we are interested in correctly predicting both 'Healthy' and 'High-risk' loans, and this model does an excellent job at both.
+
+I would recommend using the logistic regression model due to its impressive performance in this scenario. However, it is essential to remember that we should still continue to validate the model with new data, and the results might change as the nature of the data changes.
